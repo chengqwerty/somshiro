@@ -1,0 +1,29 @@
+## Eclipse Setting Files ##
+.classpath
+.project
+.settings
+
+## Package Files ##
+*.war
+*.ear
+
+## gradle  ##
+.gradle
+build
+bin
+
+
+## other ##
+.DS_Store
+
+
+
+## idea ##
+*.iml
+*.ipr
+*.iws
+classes
+.idea
+
+#local properties
+jdbc.local.properties
