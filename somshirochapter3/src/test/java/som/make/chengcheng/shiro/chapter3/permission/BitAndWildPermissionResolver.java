@@ -11,6 +11,7 @@ public class BitAndWildPermissionResolver implements PermissionResolver {
 
     @Override
     public Permission resolvePermission(String permissionString){
+        System.out.println("resolvePermission==========permissionString is "+permissionString);
         if(permissionString.startsWith("+")){
             return new BitPermission(permissionString);
         }

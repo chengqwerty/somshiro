@@ -1,4 +1,4 @@
-package som.make.chengcheng.shiro.chapter3.Realm;
+package som.make.chengcheng.shiro.chapter3.realm;
 
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -18,9 +18,11 @@ public class MyRealm extends AuthorizingRealm{
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection){
+        System.out.println("doGetAuthorizationInfo========= principalCollection is "+principalCollection.toString());
         SimpleAuthorizationInfo simpleAuthorizationInfo=new SimpleAuthorizationInfo();
         simpleAuthorizationInfo.addRole("role1");
         simpleAuthorizationInfo.addRole("role2");
+        System.out.println("simpleAuthorizationInfo.addObjectPermission(new BitPermission(\"+user1+10\"))");
         simpleAuthorizationInfo.addObjectPermission(new BitPermission("+user1+10"));
         simpleAuthorizationInfo.addObjectPermission(new WildcardPermission("user1:*"));
         simpleAuthorizationInfo.addStringPermission("+user2+10");
@@ -30,6 +32,7 @@ public class MyRealm extends AuthorizingRealm{
 
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) {
+        System.out.println("========doGetAuthenticationInfo");
         String username=(String ) authenticationToken.getPrincipal();
         String password=new String((char[]) authenticationToken.getCredentials());
         if(!"zhang".equals(username)){
