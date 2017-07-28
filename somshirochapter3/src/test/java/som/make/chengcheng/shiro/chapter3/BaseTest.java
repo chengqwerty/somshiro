@@ -31,7 +31,6 @@ public class BaseTest {
         Subject subject=SecurityUtils.getSubject();
         UsernamePasswordToken usernamePasswordToken=new UsernamePasswordToken(username,password);
 
-        System.out.println("========subject.login(usernamePasswordToken)");
         subject.login(usernamePasswordToken);
     }
 
