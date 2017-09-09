@@ -37,6 +37,7 @@ public class AuthenticatorTest {
         Subject subject=SecurityUtils.getSubject();
 
         PrincipalCollection principalCollection=subject.getPrincipals();
+        System.out.println(principalCollection.asList());
         Assert.assertEquals(2,principalCollection.asList().size());
     }
 

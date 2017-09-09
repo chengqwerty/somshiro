@@ -45,9 +45,9 @@ public class PermissionTest extends BaseTest{
         subject().checkPermissions("system:user:*");
     }
 
-    @Test(expected = UnauthorizedException.class)
+    @Test
     public void testChengchengRole43(){
         login("classpath:shiro-permission.ini","chengcheng","123");
-        subject().checkPermissions("system:user:update,delete");
+        subject().checkPermissions("system:user:delete,system:user:update");
     }
 }

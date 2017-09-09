@@ -22,6 +22,8 @@ public class MyRealm1 implements Realm {
         String username=(String)authenticationToken.getPrincipal();
         String password=new String((char[])authenticationToken.getCredentials());
 
+        System.out.println("This is " + getName());
+
         if(!"zhang".equals(username)){
             throw new UnknownAccountException("username is error");
         }
