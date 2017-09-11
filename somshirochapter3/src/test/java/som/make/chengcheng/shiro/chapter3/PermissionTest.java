@@ -48,6 +48,6 @@ public class PermissionTest extends BaseTest{
     @Test
     public void testChengchengRole43(){
         login("classpath:shiro-permission.ini","chengcheng","123");
-        subject().checkPermissions("system:user:delete,system:user:update");
+        subject().checkPermissions("abc:def");
     }
 }
