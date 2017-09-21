@@ -11,7 +11,9 @@
     <modules>
         <module>somshirochapter2</module>
         <module>somshirochapter3</module>
+        <module>somshirochapter4</module>
         <module>shiromine</module>
+        <module>somshirochapter4</module>
     </modules>
 
     <repositories>
