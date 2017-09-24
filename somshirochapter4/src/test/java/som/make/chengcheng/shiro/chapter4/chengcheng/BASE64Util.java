@@ -41,7 +41,7 @@ public class BASE64Util {
     }
 
     public static void main(String[] args) {
-        String source = "啊多发点收费的";
+        String source = "啊多发点收费的东方饭店";
 
         String encodedStr = BASE64Util.encode(source);
         System.out.println("BASE64加密结果：");
