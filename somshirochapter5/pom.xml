@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>som.shiro.chapter2</artifactId>
+    <artifactId>somshirochapter5</artifactId>
 
     <repositories>
         <repository>
@@ -71,14 +71,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.oracle</groupId>
-            <artifactId>my-oracle</artifactId>
-            <version>0.6</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/ojdbc6.jar</systemPath>
-        </dependency>
-
-        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.1.0</version>
@@ -86,5 +78,6 @@
 
 
     </dependencies>
+
 
 </project>
