@@ -11,6 +11,7 @@ public class AuthorizerTest extends BaseTest {
     @Test
     public void testIsPermitted(){
         login("classpath:shiro-authorizer.ini","zhang","123");
+        subject().isPermitted("+user1+2");
         //
         Assert.assertTrue(subject().isPermitted("user1:update"));
         Assert.assertTrue(subject().isPermitted("user2:update"));
