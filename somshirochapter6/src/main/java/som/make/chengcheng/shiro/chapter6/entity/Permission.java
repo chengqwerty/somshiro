@@ -4,13 +4,13 @@ public class Permission {
     private Long id;
     private String permission; //权限标识
     private String description; //权限描述
-    private Boolean available = Boolean.FALSE; //是否可用
+    private String available; //是否可用
 
     public Permission() {
 
     }
 
-    public Permission(String permission, String description, Boolean available) {
+    public Permission(String permission, String description, String available) {
         this.permission = permission;
         this.description = description;
         this.available = available;
@@ -40,11 +40,11 @@ public class Permission {
         this.description = description;
     }
 
-    public Boolean getAvailable() {
+    public String getAvailable() {
         return available;
     }
 
-    public void setAvailable(Boolean available) {
+    public void setAvailable(String available) {
         this.available = available;
     }
 

@@ -53,7 +53,7 @@ public class PermissionTest extends BaseTest{
     public void testChengchengRole43(){
         login("classpath:shiro-permission.ini","chengcheng","123");
         //subject().checkPermissions("system:user:update");
-        subject().checkPermissions("system:user:update,delete");
+        //subject().checkPermissions("system:user:update,delete");
         subject().isPermitted("system:user:update");
     }
 }

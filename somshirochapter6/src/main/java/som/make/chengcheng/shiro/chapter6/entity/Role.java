@@ -6,13 +6,13 @@ public class Role implements Serializable{
     private Long id;
     private String role; //角色标识
     private String description; //角色描述
-    private Boolean available = Boolean.FALSE; //角色是否可用
+    private String available; //角色是否可用
 
     public Role() {
 
     }
 
-    public Role(String role, String description, Boolean available) {
+    public Role(String role, String description, String available) {
         this.role = role;
         this.description = description;
         this.available = available;
@@ -42,11 +42,11 @@ public class Role implements Serializable{
         this.description = description;
     }
 
-    public Boolean getAvailable() {
+    public String getAvailable() {
         return available;
     }
 
-    public void setAvailable(Boolean available) {
+    public void setAvailable(String available) {
         this.available = available;
     }
 
